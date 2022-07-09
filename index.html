@@ -11,20 +11,43 @@
 <body>
     <h1>Tamagotchi Project</h1>
     <script type="text/javascript" src="js/app.js"></script>
-    <div id=""></div>
-    
-    <div> This is your pet!  </div>
+    <div id="nameSpace"></div>
+
+    <!-- make a function that targets the nameSpace div, 
+        write in app.js const nameSpace = document.querySelector("#nameSpace")
+        from that write a function that creates a element with in the nameSpace div 
+        
+        write an on submit function 
+        that changes the inner  html of nameSpace div
+     -->
+    <div> This is your pet </div>
     <div> Name your pet and press submit and start this game!! </div>
     <form id="name"> Tamagotchi Name:  
         <input id="start" type="text" name="fna me">
-
+        
         <input id="nameInput" type="button" value="Submit" onclick="naming()">
+
+        
+        <script>
+            const nameInput = document.getElementById("nameInput");
+
+            nameInput.addEventListener("click, function(e)")
+            console.log(nameInput)
+        </script>
     </form>
     <main>				
         <button class="button" id="play">Play with your pet!</button>
         <button class="button" id="feed">Feed your pet!</button>
         <button class="button" id="light">Turn off Light</button></main>
 
+        <script> 
+            const playButton = document.getElementById("play"); 
+            // (write a function playtime
+            // when this button is click change the value of boredom by 1 
+            const feedButton = document.getElementById("feed")
+
+            const lightButton = document.getElementById("light")
+            </script>
         <div id="Information page">
             <p>Take care of your Tamagotchi</p>
             <div> 
