@@ -15,22 +15,26 @@ class Game {
         this.tamagotchi = new Tamagotchi(0, 0, 0, 0, "");
 
     }
-    // petTamagotchi() {
+}
+    
+
+
+// petTamagotchi() {
 
     // }
     //this.tamagotchi.boredom-=1 
 
-    this.tamogachi.name = 
-nameTamogachi()
-nameTamogachi(name) {
-this.tamiogachi.name = name;
-}
+//     thistamogachiname = 
+// nameTamogachi()
+// nameTamogachi(name) {
+// this.tamiogachi.name = name;
+// }
 
-x = new Game()
-x.nameTamogachi(Jeddy);
-}
+// x = new Game()
+// x.nameTamogachi(Jeddy);
+// }
 
-const nameSpace = document.querySelector("#nameSpace")
+// const nameSpace = document.querySelector("#nameSpace")
 //select each buttons and save them to a variable
 
 
@@ -64,9 +68,8 @@ const nameSpace = document.querySelector("#nameSpace")
 // live functions is what is controling the buttons 
 // live ()
 
-on
-onClick={nameTamocachi(input)}
+// on
+// onClick={nameTamocachi(input)}
 
-run()
+// run()
 
-setInterval( )

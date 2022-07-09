@@ -20,21 +20,22 @@
         write an on submit function 
         that changes the inner  html of nameSpace div
      -->
-    <div> This is your pet </div>
-    <div> Name your pet and press submit and start this game!! </div>
-    <form id="name"> Tamagotchi Name:  
-        <input id="start" type="text" name="fna me">
-        
-        <input id="nameInput" type="button" value="Submit" onclick="naming()">
+    <div>This is your pet </div>
+        <button id="name" type="button">Name Button</button>
 
-        
         <script>
-            const nameInput = document.getElementById("nameInput");
+            const nameButton = document.getElementById("name");
+            const nameText = document.getElementById("nameSpace");
+            // const nameSpace = document.querySelector (#nameSpace);
+            function name1() {
+                nameText.innerHTML = nameSpace
+            }
+            nameButton.addEventListener("click", function(e) {
+                const name = prompt("Pet name?")
 
-            nameInput.addEventListener("click, function(e)")
-            console.log(nameInput)
+                document.getElementById("nameSpace").innerHTML = name;
+            }) ;
         </script>
-    </form>
     <main>				
         <button class="button" id="play">Play with your pet!</button>
         <button class="button" id="feed">Feed your pet!</button>
@@ -43,10 +44,26 @@
         <script> 
             const playButton = document.getElementById("play"); 
             // (write a function playtime
+            playButton.addEventListener("click", clickPlay) {
+
+            }
+
+            function clickPlay() {
+                
+            }
             // when this button is click change the value of boredom by 1 
             const feedButton = document.getElementById("feed")
+            
+            feedButton.addEventListener("click", {
+                // alert("button clicked")
+            })
 
             const lightButton = document.getElementById("light")
+
+            lightButton.addEventListener("click", {
+                // alert("button clicked")
+            })
+
             </script>
         <div id="Information page">
             <p>Take care of your Tamagotchi</p>
