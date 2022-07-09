@@ -12,12 +12,24 @@ class Tamagotchi {
 // make a game object 
 class Game { 
     constructor() {
-        this.tamagotchi = new Tamagotchi(0, 0, 0, 0, "");
+        this.tamagotchi = newTamagotchi(0, 0, 0, 0, "");
+
 
     }
 }
-    
+    let tamagotchi = new Tamagotchi(0,0,0,0, "")
+function clickPlay() {
+    tamagotchi.boredom-=1  
+}
+console.log(tamagotchi)
 
+function clickFeed() {
+    tamagotchi.hunger-=1
+}
+
+function clickSleep() {
+    tamagotchi.sleepiness-=1
+}
 
 // petTamagotchi() {
 
@@ -42,8 +54,24 @@ class Game {
 
 
 //look up set interval to start timer 
+function getHungry() {
+    
+
+    // return the hunger
+    let petHunger = Tamagotchi.hunger+=1;
+
+    console.log(getHungry)
+}
+
+setInterval(getHungry, 5000);
 //look up how to stop timer 
 
+function timeAge() {
+    let timer = tamagotchi.age+=1;
+    console.log(timeAge)
+}
+
+setInterval(timeAge,5000,);
 
 //css animations 
 
@@ -71,5 +99,10 @@ class Game {
 // on
 // onClick={nameTamocachi(input)}
 
-// run()
+// run clock()
+// const runClock = () => {
+//     let timers = setInterval(() => {
+//         tamagotchi.
+//     })
+// }
 

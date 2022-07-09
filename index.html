@@ -42,25 +42,37 @@
         <button class="button" id="light">Turn off Light</button></main>
 
         <script> 
-            const playButton = document.getElementById("play"); 
+             const playButton = document.getElementById("play"); 
+             const playText = document.getElementById("hungerLevel");
             // (write a function playtime
-            playButton.addEventListener("click", clickPlay) {
-
-            }
-
-            function clickPlay() {
+            playButton.addEventListener("click",
+                clickPlay) 
+                    document.getElementById("");
                 
-            }
+
+                    // let tamagotchi = new Tamagotchi(0,0,0,0, "")
+            function clickPlay() {
+                tamagotchi.boredom-=1  
+                }
+                console.log(tamagotchi)
+
+            function clickFeed() {
+                tamagotchi.hunger-=1
+                }
+
+            function clickSleep() {
+                tamagotchi.sleepiness-=1
+                }
             // when this button is click change the value of boredom by 1 
             const feedButton = document.getElementById("feed")
             
-            feedButton.addEventListener("click", {
+            feedButton.addEventListener("click", () => { clickFeed ()
                 // alert("button clicked")
             })
 
             const lightButton = document.getElementById("light")
 
-            lightButton.addEventListener("click", {
+            lightButton.addEventListener("click", { clickSleep
                 // alert("button clicked")
             })
 
@@ -70,13 +82,13 @@
             <div> 
                 
                 <span> Hunger: </span>
-                <span> 0 </span> 
+                <div class="Game" id="hungerLevel">0</div> 
                 <span>Sleepiness: </span>
-                <span> 0 </span>
+                <div class="Game" id="sleepyLevel">0</div>
                 <span> Boredom: </span>
-                <span> 0</span>
-                <span> Age: </span>
-                <span> 0 </span>
+                <div class="Game" id="boredomLevel">0</div>
+                <span>Age:</span>
+                <div class="Game" id="petAge">0</div>
 
             </div>
         </div>
