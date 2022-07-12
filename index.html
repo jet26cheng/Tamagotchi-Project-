@@ -10,7 +10,7 @@
 </head>
 <body>
     <h1>Tamagotchi Project</h1>
-    <script type="text/javascript" src="js/app.js"></script> <!-- possibly needs to change to ./app.js -->
+     <!-- possibly needs to change to ./app.js -->
     <div id="nameSpace"></div>
 
     <!-- make a function that targets the nameSpace div, 
@@ -71,21 +71,28 @@
             </script> -->
         <div id="Information page">
             <p>Take care of your Tamagotchi</p>
-            <p>If Hunger, Sleepiness, or Boredom gets to 10 your pet will die!!! So please don't let your pet die! </p>
+            <p>
+                Rules:
+                If Hunger, Sleepiness, or Boredom gets to 10 your pet will die!!! So please don't let your pet die! </p>
             <div> 
                 
                 <span> Hunger: </span>
-                <div class="Tamagotchi" id="hungerLevel">0</div> 
+                <div class="tamagotchi" id="hungerLevel">0</div> 
                 <span>Sleepiness: </span>
-                <div class="Tamagotchi" id="sleepyLevel">0</div>
+                <div class="tamagotchi" id="sleepyLevel">0</div>
                 <span> Boredom: </span>
-                <div class="Tamagotchi" id="boredomLevel">0</div>
+                <div class="tamagotchi" id="boredomLevel">0</div>
                 <span>Age:</span>
-                <div class="Tamagotchi" id="petAge">0</div>
+                <div class="tamagotchi" id="petAge">0</div>
 
             </div>
         </div>
-        <div> <img src="./images/jumpy-lumpy.gif" alt=""> </div>
+        <div> 
+            <img class="tamagotchi-image" src="./images/jumpy-lumpy.gif" alt=""> 
+            
+        </div>
         
+
+        <script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>

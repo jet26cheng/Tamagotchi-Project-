@@ -1,12 +1,12 @@
 
 // make a tamagotchi class
 class Tamagotchi {
-    constructor(hunger,sleepiness, boredom, age, name) {
+    constructor(hunger,sleepiness, boredom, age) {
         this.age = 0;
         this.boredom = 0;
         this.hunger = 0;
         this.sleepiness = 0;
-        this.name = name;
+        
     }
 
 // make a game object 
@@ -19,21 +19,23 @@ class Tamagotchi {
 //     }
     // let tamagotchi = new Tamagotchi(0,0,0,0, "")
     clickPlay() {
-        if(this.boredom >= 0) {
-            this.boredom-= 1;  
+        if(tamagotchi.boredom >= 0) {
+            tamagotchi.boredom-= 1;  
         }
     }
 
     clickFeed() {
-        if(this.hunger >= 0) {
-            this.hunger-= 1;  
+        if(tamagotchi.hunger >= 0) {
+            tamagotchi.hunger-= 1;  
         }
     }
     
 
     clickSleep() {
-        if(this.sleepiness >= 0) {
-            this.sleepiness-= 1;  
+        if(tamagotchi.sleepiness >= 0) {
+            tamagotchi.sleepiness-= 1;  
+            
+
         }
     }
 }
@@ -67,25 +69,29 @@ class Tamagotchi {
 //look up set interval to start timer 
 const getHungry = () => {
     let hungerLevel = document.querySelector("#hungerLevel")
-    this.hunger += 1 
-    hungerLevel.innerText = this.hunger
+    tamagotchi.hunger += 1 
+    hungerLevel.innerText = tamagotchi.hunger
 
-    
+    tamagotchiIsDead()
    
 }
 setInterval(getHungry,10000);
 
 const getBored = () => {
     let boredomLevel = document.querySelector('#boredomLevel')
-    this.boredom += 1
-    boredomLevel.innerText = this.boredom
+    tamagotchi.boredom += 1
+    boredomLevel.innerText = tamagotchi.boredom
+
+    tamagotchiIsDead()
 }
 setInterval(getBored, 10000);
 
 const getSleepy = () => {
     let sleepyLevel = document.querySelector('#sleepyLevel')
-    this.sleepiness += 1 
-    sleepyLevel.innerText = this.sleepiness
+    tamagotchi.sleepiness += 1 
+    sleepyLevel.innerText = tamagotchi.sleepiness
+
+    tamagotchiIsDead()
 }
 setInterval(getSleepy, 10000);
 
@@ -93,12 +99,32 @@ setInterval(getSleepy, 10000);
 
 const timeAge = () => {
     let petAge = document.querySelector('#petAge')
-    this.age += 1
-    petAge.innerText = this.age
+    tamagotchi.age += 1
+    petAge.innerText = tamagotchi.age
 
+    if (tamagotchi.age == 5) {
+        alert ("Your pet is evolving!");
+        
+        
+        document.body.querySelector("img").setAttribute("src", "./images/catbug-smile.gif")
 
+    
+    }
 }
-setInterval(timeAge, 10000);
+setInterval(timeAge, 5000);
+
+console.log("tamagotchi-image")
+
+const tamagotchiIsDead = () => {
+    if(tamagotchi.hunger >= 10 || tamagotchi.sleepiness >= 10 || tamagotchi.boredom >= 10){
+        alert(`Your pet has died`)
+      
+        document.body.querySelector("img").setAttribute("src", "./images/catbug-sad.gif")
+
+    }
+}
+
+
 //css animations 
 
 
@@ -133,21 +159,22 @@ setInterval(timeAge, 10000);
 // }
 
 const clickFeed = () => {
-    this.clickFeed()
-    document.querySelector('#hungerLevel').innerText = this.hunger
+    tamagotchi.clickFeed()
+    document.querySelector('#hungerLevel').innerText = tamagotchi.hunger
 }
 
 const clickSleep = () => {
-    this.clickSleep()
-    document.querySelector('#sleepyLevel').innerText = this.sleepiness
+    tamagotchi.clickSleep()
+    document.querySelector('#sleepyLevel').innerText = tamagotchi.sleepiness
 }
 
 const clickPlay = () => {
-    this.clickPlay()
-    document.querySelector('#boredomLevel').innerText = this.boredom
+    tamagotchi.clickPlay()
+    document.querySelector('#boredomLevel').innerText = tamagotchi.boredom
 }
 
 // these are the event listeners for the buttons I created 
+console.log(document.getElementById('feed'))
 document.getElementById('feed').addEventListener('click', clickFeed)
 document.getElementById('light').addEventListener('click',clickSleep)
 document.getElementById('play').addEventListener('click', clickPlay)
