@@ -2,34 +2,46 @@
 // make a tamagotchi class
 class Tamagotchi {
     constructor(hunger,sleepiness, boredom, age, name) {
-        this.age = age
-        this.boredom = boredom
-        this.hunger = hunger
-        this.sleepiness = sleepiness
-        this.name = name
+        this.age = 0;
+        this.boredom = 0;
+        this.hunger = 0;
+        this.sleepiness = 0;
+        this.name = name;
     }
-}
+
 // make a game object 
-class Game { 
-    constructor() {
-        this.tamagotchi = newTamagotchi(0, 0, 0, 0, "");
+// class Game { 
+//     constructor() {
+//         this.tamagotchi = new Tamagotchi(0, 0, 0, 0, "");
+        
 
 
+//     }
+    // let tamagotchi = new Tamagotchi(0,0,0,0, "")
+    clickPlay() {
+        if(this.boredom >= 0) {
+            this.boredom-= 1;  
+        }
+    }
+
+    clickFeed() {
+        if(this.hunger >= 0) {
+            this.hunger-= 1;  
+        }
+    }
+    
+
+    clickSleep() {
+        if(this.sleepiness >= 0) {
+            this.sleepiness-= 1;  
+        }
     }
 }
-    let tamagotchi = new Tamagotchi(0,0,0,0, "")
-function clickPlay() {
-    tamagotchi.boredom-=1  
-}
-console.log(tamagotchi)
 
-function clickFeed() {
-    tamagotchi.hunger-=1
-}
 
-function clickSleep() {
-    tamagotchi.sleepiness-=1
-}
+  
+ const tamagotchi = new Tamagotchi;
+//  tamogachi.clickPlay();
 
 // petTamagotchi() {
 
@@ -46,7 +58,6 @@ function clickSleep() {
 // x.nameTamogachi(Jeddy);
 // }
 
-// const nameSpace = document.querySelector("#nameSpace")
 //select each buttons and save them to a variable
 
 
@@ -54,25 +65,40 @@ function clickSleep() {
 
 
 //look up set interval to start timer 
-function getHungry() {
+const getHungry = () => {
+    let hungerLevel = document.querySelector("#hungerLevel")
+    this.hunger += 1 
+    hungerLevel.innerText = this.hunger
+
     
-
-    // return the hunger
-    let petHunger = Tamagotchi.hunger+=1;
-
-    console.log(getHungry)
+   
 }
+setInterval(getHungry,10000);
 
-setInterval(getHungry, 5000);
-//look up how to stop timer 
-
-function timeAge() {
-    let timer = tamagotchi.age+=1;
-    console.log(timeAge)
+const getBored = () => {
+    let boredomLevel = document.querySelector('#boredomLevel')
+    this.boredom += 1
+    boredomLevel.innerText = this.boredom
 }
+setInterval(getBored, 10000);
 
-setInterval(timeAge,5000,);
+const getSleepy = () => {
+    let sleepyLevel = document.querySelector('#sleepyLevel')
+    this.sleepiness += 1 
+    sleepyLevel.innerText = this.sleepiness
+}
+setInterval(getSleepy, 10000);
 
+
+
+const timeAge = () => {
+    let petAge = document.querySelector('#petAge')
+    this.age += 1
+    petAge.innerText = this.age
+
+
+}
+setInterval(timeAge, 10000);
 //css animations 
 
 
@@ -106,3 +132,22 @@ setInterval(timeAge,5000,);
 //     })
 // }
 
+const clickFeed = () => {
+    this.clickFeed()
+    document.querySelector('#hungerLevel').innerText = this.hunger
+}
+
+const clickSleep = () => {
+    this.clickSleep()
+    document.querySelector('#sleepyLevel').innerText = this.sleepiness
+}
+
+const clickPlay = () => {
+    this.clickPlay()
+    document.querySelector('#boredomLevel').innerText = this.boredom
+}
+
+// these are the event listeners for the buttons I created 
+document.getElementById('feed').addEventListener('click', clickFeed)
+document.getElementById('light').addEventListener('click',clickSleep)
+document.getElementById('play').addEventListener('click', clickPlay)
