@@ -166,6 +166,13 @@ const clickFeed = () => {
 const clickSleep = () => {
     tamagotchi.clickSleep()
     document.querySelector('#sleepyLevel').innerText = tamagotchi.sleepiness
+
+    // document.body.style.backgroundColor = "black";
+    if (document.body.style.backgroundColor=== "grey") {
+        document.body.style.backgroundColor = "black";
+    } else {
+        document.body.style.backgroundColor = "grey";
+    }
 }
 
 const clickPlay = () => {
